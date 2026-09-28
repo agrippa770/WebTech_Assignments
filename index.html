@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agripa Moyo - Personal Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Agripa Moyo</h1>
+    <p>ID: 202505368 | Computer Science Student, Mulungushi University</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#hobbies">My Hobbies</a>
+    <a href="#learning-plan">My Learning Plan</a>
+    <a href="#photos">My Photos</a>
+    <a href="#media">My Media</a>
+    <a href="#contact">Contact</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">MDN Web Docs</a>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello World! This is my first HTML document. I am currently learning Introduction to Web Technologies at Mulungushi University, and I hope to become confident enough to build complete websites on my own.</p>
+    </section>
+
+    <section id="hobbies">
+      <h2>My Top 3 Hobbies</h2>
+      <ul>
+        <li>Listening to music</li>
+        <li>Playing football</li>
+        <li>Watching movies</li>
+      </ul>
+
+      <h3>My Plan to Improve My Web Skills</h3>
+      <ol>
+        <li>Practice building a small page with HTML and CSS every week.</li>
+        <li>Complete an online JavaScript course.</li>
+        <li>Study one real website's layout each week and try to recreate part of it.</li>
+      </ol>
+    </section>
+
+    <section id="learning-plan">
+      <h2>My Weekly Learning Plan</h2>
+      <table>
+        <caption>Weekly Web Development Learning Plan</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Practice Task</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML structure</td>
+            <td>Rebuild this page's sections from scratch</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS layout</td>
+            <td>Style the photo gallery and nav bar</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Forms and tables</td>
+            <td>Build a small contact form with validation</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="photos">
+      <h2>My Pictures</h2>
+      <!-- keep your existing img tags here, e.g. -->
+      <img src="images/myphoto1.jpeg" alt="Describe this photo">
+      <img src="images/myphoto2.jpeg" alt="Describe this photo">
+      <img src="images/myphoto3.jpeg" alt="Describe this photo">
+    </section>
+
+    <section id="media">
+      <h2>My Video Introduction</h2>
+      <video controls width="480" src="videos/Intro.mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h2>My Audio Clip</h2>
+      <audio controls src="videos/intro.mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>This form is a browser demonstration only; it does not send any data.</p>
+      <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+          <option value="general">General inquiry</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="feedback">Feedback on my site</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Agripa Moyo. Built for ICT251 Web Technologies.</p>
+  </footer>
+
+</body>
+</html>
