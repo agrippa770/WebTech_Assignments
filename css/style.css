@@ -1,4 +1,4 @@
-/* ===== Base ===== */
+/* Base  */
 * {
   box-sizing: border-box;
 }
@@ -18,7 +18,7 @@ video {
   height: auto;
 }
 
-/* ===== Header ===== */
+/*  Header  */
 header {
   background-color: #123a24;
   color: #fff;
@@ -30,7 +30,7 @@ header h1 {
   margin: 0 0 0.25rem;
 }
 
-/* ===== Navigation ===== */
+/*  Navigation */
 nav {
   background-color: #1f5e3a;
   display: flex;
@@ -52,7 +52,7 @@ nav a:focus-visible {
   color: #1a1a1a;
 }
 
-/* ===== Main content ===== */
+/*  Main content  */
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -81,7 +81,7 @@ section h2 {
   background-color: #f1f6fa;
 }
 
-/* ===== Hobbies list ===== */
+/*  Hobbies list  */
 #hobbies ul {
   list-style: none;
   display: flex;
@@ -98,7 +98,7 @@ section h2 {
   font-size: 0.95rem;
 }
 
-/* ===== Learning plan table ===== */
+/* Learning plan table  */
 table {
   width: 100%;
   border-collapse: collapse;
