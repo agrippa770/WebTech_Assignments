@@ -2,130 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agripa Moyo - Personal Website</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agripa Moyo | Computer Science Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-
-  <header>
-    <h1>Agripa Moyo</h1>
-    <p>ID: 202505368 | Computer Science Student, Mulungushi University</p>
+  <header class="site-header">
+    <a class="brand" href="#home">Agripa Moyo</a>
+    <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+    <nav aria-label="Main navigation">
+      <ul id="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#photos">Gallery</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#hobbies">My Hobbies</a>
-    <a href="#learning-plan">My Learning Plan</a>
-    <a href="#photos">My Photos</a>
-    <a href="#media">My Media</a>
-    <a href="#contact">Contact</a>
-    <a href="https://edurole.mu.ac.zm/" target="_blank" rel="noopener">MDN Web Docs</a>
-  </nav>
-
   <main>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello World! This is my first HTML document. I am currently learning Introduction to Web Technologies at Mulungushi University, and I hope to become confident enough to build complete websites on my own.</p>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Agripa Moyo</h1>
+        <p class="programme">BSc Computer Science <span class="dot">•</span> Mulungushi University</p>
+        <p class="lead">Curious mind. Steady builder. I'm a Computer Science student learning to build complete websites, one small project at a time.</p>
+        <a class="btn" href="#projects">View My Projects →</a>
+      </div>
+      <img class="hero-img" style="object-position:68% 55%" src="images/myphoto4.jpeg" alt="Agripa Moyo outdoors in an orange, white and navy striped polo shirt, looking to the side">
     </section>
 
-    <section id="hobbies">
-      <h2>My Top 3 Hobbies</h2>
-      <ul>
-        <li>Listening to music</li>
-        <li>Playing football</li>
-        <li>Watching movies</li>
-      </ul>
+    <div class="band cols">
+      <div class="col">
+        <section id="about" class="block">
+          <h2>About Me</h2>
+          <p>Hello World! I am Agripa Moyo, a Computer Science student at Mulungushi University (ID: 202505368). I am currently learning Introduction to Web Technologies, and I hope to become confident enough to build complete websites on my own. Outside class I enjoy music, football and movies, and I like learning by building small projects and improving them every week.</p>
+        </section>
 
-      <h3>My Plan to Improve My Web Skills</h3>
-      <ol>
-        <li>Practice building a small page with HTML and CSS every week.</li>
-        <li>Complete an online JavaScript course.</li>
-        <li>Study one real website's layout each week and try to recreate part of it.</li>
-      </ol>
-    </section>
+        <section id="learning" class="block">
+          <h2>Learning Plan</h2>
+          <ol class="steps">
+            <li>Practice building a small page with HTML and CSS every week.</li>
+            <li>Complete an online JavaScript course.</li>
+            <li>Study one real website's layout each week and recreate part of it.</li>
+          </ol>
+          <div class="table-wrap">
+            <table>
+              <caption class="sr-only">Weekly Web Development Learning Plan</caption>
+              <thead><tr><th scope="col">Area</th><th scope="col">Focus</th><th scope="col">Status</th></tr></thead>
+              <tbody id="learning-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
 
-    <section id="learning-plan">
-      <h2>My Weekly Learning Plan</h2>
-      <table>
-        <caption>Weekly Web Development Learning Plan</caption>
-        <thead>
-          <tr>
-            <th>Day</th>
-            <th>Topic</th>
-            <th>Practice Task</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Monday</td>
-            <td>HTML structure</td>
-            <td>Rebuild this page's sections from scratch</td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>CSS layout</td>
-            <td>Style the photo gallery and nav bar</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td>Forms and tables</td>
-            <td>Build a small contact form with validation</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <div class="col">
+        <section id="hobbies" class="block">
+          <h2>Hobbies</h2>
+          <ul class="cards">
+            <li class="card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="17" y="14" width="4" height="6" rx="1"/></svg>Music</h3>
+              <p>Listening to music helps me relax and focus when I study.</p>
+            </li>
+            <li class="card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10z"/></svg>Football</h3>
+              <p>Teamwork and staying active away from the screen.</p>
+            </li>
+            <li class="card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>Movies</h3>
+              <p>Great stories and a way to unwind after class.</p>
+            </li>
+          </ul>
+        </section>
 
-    <section id="photos">
-      <h2>My Pictures</h2>
-      <!-- keep your existing img tags here, e.g.-->
-      <img src="images/myphoto1.jpeg" alt="Describe this photo">
-      <img src="images/myphoto2.jpeg" alt="Describe this photo">
-      <img src="images/myphoto3.jpeg" alt="Describe this photo">
-    </section>
+        <section id="projects" class="block">
+          <h2>Projects &amp; Skills</h2>
+          <ul class="cards">
+            <li class="card">
+              <h3>HTML <span class="pill">Skill</span></h3>
+              <p>Building a personal page with header, nav, main, sections and footer.</p>
+              <p class="tags">HTML5 · Semantic tags</p>
+              <p class="actions"><a href="https://github.com/YOUR-USERNAME/YOUR-REPO">GitHub</a><button class="toggle" type="button" aria-expanded="false" aria-controls="d1">Details</button></p>
+              <p id="d1" class="details" hidden>I learned to structure content with headings, lists, tables, images, video and audio.</p>
+            </li>
+            <li class="card">
+              <h3>CSS <span class="pill">Skill</span></h3>
+              <p>Styling navigation, photos, tables and forms with external CSS.</p>
+              <p class="tags">CSS3 · Layout · Responsive</p>
+              <p class="actions"><a href="https://github.com/YOUR-USERNAME/YOUR-REPO">GitHub</a><button class="toggle" type="button" aria-expanded="false" aria-controls="d2">Details</button></p>
+              <p id="d2" class="details" hidden>I learned selectors, the box model, colours, spacing and adapting a layout to phones.</p>
+            </li>
+            <li class="card">
+              <h3>JavaScript <span class="pill">Skill</span></h3>
+              <p>Validating a contact form and updating the page without reloading.</p>
+              <p class="tags">JavaScript · DOM · Events</p>
+              <p class="actions"><a href="https://github.com/YOUR-USERNAME/YOUR-REPO">GitHub</a><button class="toggle" type="button" aria-expanded="false" aria-controls="d3">Details</button></p>
+              <p id="d3" class="details" hidden>I learned to respond to events, check user input, and change the page with the DOM.</p>
+            </li>
+          </ul>
+        </section>
 
-    <section id="media">
-      <h2>My Video Introduction</h2>
-      <video controls width="480" src="videos/Intro.mp4">
-        Your browser does not support the video tag.
-      </video>
+        <section class="block" aria-label="Study hours calculator">
+          <!-- Feature: study hours calculator -->
+          <form id="hours-form" class="calc" novalidate>
+            <h3>Study hours calculator</h3>
+            <div class="calc-row">
+              <div class="field"><label for="hpd">Hours per day</label><input id="hpd" type="text" inputmode="decimal"></div>
+              <div class="field"><label for="dpw">Days per week (1 to 7)</label><input id="dpw" type="text" inputmode="numeric"></div>
+              <button class="btn small" type="submit">Calculate</button>
+            </div>
+            <p id="hours-result" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </div>
 
-      <h2>My Audio Clip</h2>
-      <audio controls src="videos/intro.mp3">
-        Your browser does not support the audio element.
-      </audio>
-    </section>
+    <div class="band cols">
+      <section id="photos" class="block col">
+        <h2>Photos</h2>
+        <div class="photos">
+          <figure><img tabindex="0" style="object-position:50% 8%" src="images/myphoto1.jpeg" alt="Agripa Moyo standing outside a building in a blue striped shirt and brown trousers"><figcaption>Standing outside in a striped shirt.</figcaption></figure>
+          <figure><img tabindex="0" style="object-position:78% 25%" src="images/myphoto3.jpeg" alt="Agripa Moyo in a black T-shirt with a red and cream pattern at a busy market"><figcaption>Out in town.</figcaption></figure>
+          <figure><img tabindex="0" style="object-position:50% 28%" src="images/myphoto5.jpeg" alt="Agripa Moyo smiling in a black patterned T-shirt on a street"><figcaption>Smiling on the street.</figcaption></figure>
+        </div>
+      </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>This form is a browser demonstration only; it does not send any data.</p>
-      <form action="#">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+      <section id="media" class="block col">
+        <h2>Media</h2>
+        <div class="media-grid">
+          <div class="media-box">
+            <video controls preload="metadata" src="videos/Intro.mp4">Your browser does not support the video tag.</video>
+            <h3>My Video Introduction</h3>
+            <p>A short video where I introduce myself and my studies.</p>
+          </div>
+          <div class="media-box">
+            <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <audio controls preload="metadata" src="videos/intro.mp3">Your browser does not support the audio element.</audio>
+            <h3>My Audio Clip</h3>
+            <p>A short audio introduction about my goals. <a href="videos/intro.mp3" download>Download audio</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="topic">Topic:</label>
-        <select id="topic" name="topic">
-          <option value="general">General inquiry</option>
-          <option value="collaboration">Collaboration</option>
-          <option value="feedback">Feedback on my site</option>
-        </select>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
+    <div class="band">
+      <section id="contact" class="block contact">
+        <div>
+          <h2>Contact</h2>
+          <p>Have a question or just want to connect? Feel free to reach out.</p>
+          <p class="demo-note">Browser demonstration only — no message is sent.</p>
+          <div id="preview" class="preview" role="status" aria-live="polite" hidden></div>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="trio">
+            <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="Your Name" required><span class="error" id="name-error"></span></div>
+            <div class="field"><label for="email">Your Email</label><input id="email" name="email" type="email" placeholder="Your Email" required><span class="error" id="email-error"></span></div>
+            <div class="field"><label for="topic">Topic</label>
+              <select id="topic" name="topic"><option value="general">General inquiry</option><option value="collaboration">Collaboration</option><option value="feedback">Feedback on my site</option></select>
+            </div>
+          </div>
+          <div class="field"><label for="message">Your Message</label><textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea><span class="error" id="message-error"></span></div>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Agripa Moyo. Built for ICT251 Web Technologies.</p>
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Agripa Moyo. Built for ICT251 Web Technologies.</p>
+    <a class="gh" href="https://github.com/agrippa770/WebTech_Assignments.git"><svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.71 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>View Source on GitHub</a>
   </footer>
 
+  <dialog id="lightbox" aria-label="Photo viewer">
+    <img id="lb-img" src="" alt="">
+    <p id="lb-cap"></p>
+    <div class="lb-btns">
+      <button type="button" id="lb-prev">Previous</button>
+      <button type="button" id="lb-next">Next</button>
+      <button type="button" id="lb-close">Close</button>
+    </div>
+  </dialog>
 </body>
 </html>
